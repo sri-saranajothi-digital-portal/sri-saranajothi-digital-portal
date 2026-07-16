@@ -1,0 +1,1 @@
+NETLIFY READY: Upload this ZIP directly. It contains index.html at the root. CSS, JavaScript, logo, and 100 books are embedded in one file.
