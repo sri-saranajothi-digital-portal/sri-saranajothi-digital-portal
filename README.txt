@@ -1,1 +1,4 @@
-NETLIFY READY: Upload this ZIP directly. It contains index.html at the root. CSS, JavaScript, logo, and 100 books are embedded in one file.
+Sri Saranajothi Digital Portal V3
+
+Files to replace in GitHub: index.html, style.css, app.js, books.js, logo.jpg
+Netlify will auto-deploy after commit.
