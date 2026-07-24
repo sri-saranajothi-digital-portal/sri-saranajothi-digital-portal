@@ -1,1 +1,331 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8" />
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="SASUNA Digital Portal - ශ්‍රී සරණජෝති දහම් පාසල"
+  />
+
+  <title>SASUNA Dashboard</title>
+
+  <link rel="icon" href="./logo.jpg" />
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/dashboard.css"
+  />
+</head>
+
+<body>
+
+  <!-- Mobile menu background -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Side Menu -->
+  <aside class="side-menu" id="sideMenu">
+
+    <div class="side-menu-header">
+      <img
+        src="./logo.jpg"
+        alt="ශ්‍රී සරණජෝති දහම් පාසල් ලාංඡනය"
+        class="menu-logo"
+      />
+
+      <div>
+        <h2>SASUNA</h2>
+        <p>Digital Portal</p>
+      </div>
+
+      <button
+        type="button"
+        class="close-menu-button"
+        id="closeMenuButton"
+        aria-label="මෙනුව වසන්න"
+      >
+        ×
+      </button>
+    </div>
+
+    <nav class="side-navigation">
+
+      <a href="./dashboard.html" class="menu-link active">
+        <span>🏠</span>
+        <span>මුල් පිටුව</span>
+      </a>
+
+      <a href="./index.html" class="menu-link">
+        <span>📚</span>
+        <span>ඩිජිටල් පුස්තකාලය</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>🎓</span>
+        <span>Dhamma Academy</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>🎥</span>
+        <span>වීඩියෝ පාඩම්</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>📄</span>
+        <span>කෙටි සටහන්</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>📝</span>
+        <span>MCQ විභාග</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>🏆</span>
+        <span>ප්‍රතිඵල</span>
+      </a>
+
+      <a href="#" class="menu-link">
+        <span>⚙️</span>
+        <span>Admin Panel</span>
+      </a>
+
+    </nav>
+
+    <button type="button" class="logout-button" id="logoutBtn">
+      <span>🚪</span>
+      <span>ඉවත් වන්න</span>
+    </button>
+
+  </aside>
+
+  <!-- Top Header -->
+  <header class="top-header">
+
+    <div class="brand-area">
+      <img
+        src="./logo.jpg"
+        alt="පාසල් ලාංඡනය"
+        class="header-logo"
+      />
+
+      <div class="brand-text">
+        <h1>SASUNA</h1>
+        <p>ශ්‍රී සරණජෝති දහම් පාසල</p>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="menu-button"
+      id="menuButton"
+      aria-label="මෙනුව විවෘත කරන්න"
+    >
+      ☰
+    </button>
+
+  </header>
+
+  <!-- Main Dashboard -->
+  <main class="dashboard-container">
+
+    <!-- Welcome Section -->
+    <section class="welcome-card">
+
+      <div class="welcome-content">
+        <p class="welcome-label">🙏 ආයුබෝවන්!</p>
+
+        <h2>SASUNA Digital Portal වෙත සාදරයෙන් පිළිගනිමු</h2>
+
+        <p class="user-email" id="userEmail">
+          පරිශීලක තොරතුරු ලබාගනිමින්...
+        </p>
+
+        <p class="current-date" id="currentDate"></p>
+      </div>
+
+      <div class="welcome-symbol">☸</div>
+
+    </section>
+
+    <!-- Quick Access -->
+    <section class="dashboard-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">ඉක්මන් ප්‍රවේශය</p>
+          <h2>ඔබට අවශ්‍ය සේවාව තෝරන්න</h2>
+        </div>
+      </div>
+
+      <div class="quick-access-grid">
+
+        <a href="./index.html" class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>ඩිජිටල් පුස්තකාලය</h3>
+          <p>පොත් සොයන්න සහ කියවන්න</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#" class="feature-card">
+          <div class="feature-icon">🎓</div>
+          <h3>Dhamma Academy</h3>
+          <p>1 සිට 12 ශ්‍රේණිය දක්වා පාඩම්</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#" class="feature-card">
+          <div class="feature-icon">🎥</div>
+          <h3>වීඩියෝ පාඩම්</h3>
+          <p>අධ්‍යාපනික වීඩියෝ නරඹන්න</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#" class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>කෙටි සටහන්</h3>
+          <p>වැදගත් පාඩම් සටහන් කියවන්න</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#" class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>MCQ විභාග</h3>
+          <p>මාර්ගගත ප්‍රශ්නවලට පිළිතුරු දෙන්න</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+        <a href="#" class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>ප්‍රතිඵල</h3>
+          <p>විභාග ප්‍රතිඵල පරීක්ෂා කරන්න</p>
+          <span class="card-arrow">→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Statistics -->
+    <section class="dashboard-section">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">Portal Statistics</p>
+          <h2>අපගේ ඩිජිටල් සම්පත්</h2>
+        </div>
+      </div>
+
+      <div class="statistics-grid">
+
+        <article class="stat-card">
+          <span class="stat-icon">📚</span>
+          <strong>100</strong>
+          <p>පොත්</p>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">🎥</span>
+          <strong>0</strong>
+          <p>වීඩියෝ</p>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">📄</span>
+          <strong>0</strong>
+          <p>සටහන්</p>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">📝</span>
+          <strong>0</strong>
+          <p>විභාග</p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- Updates and Notice -->
+    <section class="information-grid">
+
+      <article class="information-card">
+
+        <div class="information-card-header">
+          <span>🆕</span>
+          <div>
+            <p>Latest Updates</p>
+            <h2>අලුතින් එක් කළ දේ</h2>
+          </div>
+        </div>
+
+        <div class="empty-state">
+          <span>📖</span>
+          <p>අලුත් සම්පත් ඉදිරියේදී මෙහි පෙන්වනු ඇත.</p>
+        </div>
+
+      </article>
+
+      <article class="information-card">
+
+        <div class="information-card-header">
+          <span>📢</span>
+          <div>
+            <p>Announcements</p>
+            <h2>නවතම නිවේදන</h2>
+          </div>
+        </div>
+
+        <div class="empty-state">
+          <span>🔔</span>
+          <p>නව නිවේදන ඉදිරියේදී මෙහි පෙන්වනු ඇත.</p>
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="bottom-navigation">
+
+    <a href="./dashboard.html" class="bottom-link active">
+      <span>🏠</span>
+      <small>Home</small>
+    </a>
+
+    <a href="./index.html" class="bottom-link">
+      <span>📚</span>
+      <small>Library</small>
+    </a>
+
+    <a href="#" class="bottom-link">
+      <span>🎓</span>
+      <small>Academy</small>
+    </a>
+
+    <a href="#" class="bottom-link">
+      <span>📝</span>
+      <small>Exams</small>
+    </a>
+
+  </nav>
+
+  <footer class="dashboard-footer">
+    <p>© 2026 ශ්‍රී සරණජෝති දහම් පාසල — මැදගම හල්පේ</p>
+    <p>SASUNA Digital Portal</p>
+  </footer>
+
+  <script
+    type="module"
+    src="./assets/js/dashboard.js"
+  ></script>
+
+</body>
+  </html>
