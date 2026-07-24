@@ -1,1 +1,215 @@
+/* =========================
+   Welcome Card
+========================= */
 
+.dashboard-container{
+    width:min(1180px, calc(100% - 32px));
+    margin:0 auto;
+    padding:32px 0 120px;
+}
+
+.welcome-card{
+    position:relative;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1.5fr .8fr;
+    gap:28px;
+    align-items:center;
+    padding:40px;
+    border-radius:28px;
+    color:#fff;
+    background:
+        radial-gradient(circle at top right, rgba(255,216,107,.35), transparent 32%),
+        linear-gradient(135deg,#3a2117 0%,#74492e 52%,#a86f34 100%);
+    box-shadow:0 24px 55px rgba(71,39,22,.24);
+}
+
+.welcome-card::before{
+    content:"";
+    position:absolute;
+    width:240px;
+    height:240px;
+    border-radius:50%;
+    left:-90px;
+    bottom:-130px;
+    background:rgba(255,255,255,.06);
+}
+
+.welcome-card::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    top:-85px;
+    right:25%;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.welcome-content,
+.welcome-visual{
+    position:relative;
+    z-index:2;
+}
+
+.welcome-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    margin-bottom:18px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:999px;
+    background:rgba(255,255,255,.1);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.welcome-label{
+    margin-bottom:6px;
+    color:#ffe59a;
+    font-size:17px;
+    font-weight:700;
+}
+
+.welcome-content h2{
+    max-width:760px;
+    margin-bottom:16px;
+    font-size:clamp(30px,5vw,54px);
+    line-height:1.18;
+}
+
+.welcome-description{
+    max-width:650px;
+    margin-bottom:26px;
+    color:rgba(255,255,255,.84);
+    font-size:16px;
+}
+
+.welcome-user-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.user-info-item{
+    min-width:230px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:13px 16px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:16px;
+    background:rgba(255,255,255,.09);
+    backdrop-filter:blur(12px);
+}
+
+.user-info-icon{
+    display:grid;
+    place-items:center;
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#ffe485,#d6a937);
+    color:#2f1c10;
+    font-size:20px;
+}
+
+.user-info-item small{
+    display:block;
+    margin-bottom:2px;
+    color:rgba(255,255,255,.65);
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+.user-email,
+.current-date{
+    max-width:260px;
+    overflow:hidden;
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.welcome-visual{
+    min-height:280px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:28px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:24px;
+    background:rgba(255,255,255,.08);
+    text-align:center;
+    backdrop-filter:blur(16px);
+}
+
+.welcome-symbol{
+    display:grid;
+    place-items:center;
+    width:132px;
+    height:132px;
+    margin-bottom:18px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:50%;
+    background:
+        radial-gradient(circle,rgba(255,235,164,.26),rgba(255,255,255,.05));
+    color:#ffe078;
+    font-size:74px;
+    box-shadow:
+        inset 0 0 35px rgba(255,225,128,.12),
+        0 15px 35px rgba(0,0,0,.18);
+}
+
+.welcome-visual p{
+    color:rgba(255,255,255,.78);
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media (max-width: 800px){
+
+    .dashboard-container{
+        width:min(100% - 20px, 1180px);
+        padding-top:18px;
+    }
+
+    .welcome-card{
+        grid-template-columns:1fr;
+        gap:22px;
+        padding:26px 20px;
+        border-radius:24px;
+    }
+
+    .welcome-content h2{
+        font-size:34px;
+    }
+
+    .welcome-user-info{
+        flex-direction:column;
+    }
+
+    .user-info-item{
+        width:100%;
+        min-width:0;
+    }
+
+    .welcome-visual{
+        min-height:220px;
+    }
+
+    .welcome-symbol{
+        width:105px;
+        height:105px;
+        font-size:60px;
+    }
+          }
